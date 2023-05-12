@@ -4,7 +4,7 @@ import streamlit as st
 from PIL import Image
 
 # loading the saved model
-loaded_model = pickle.load(open(r'C:\Users\Asus\Desktop\bankcrupcy_project\RandomForestClassifier','rb'))
+loaded_model = pickle.load(open(r'RandomForestClassifier','rb'))
 
 def Cluster_prediction(input_data):
     
@@ -43,7 +43,7 @@ def main():
     # creating a button for Prediction
     
     if st.button('Submit'):
-        Predict = Cluster_prediction([competitiveness,financial_flexibility,credibility,management_risk])
+        Predict = Bankcrupcy_prediction([competitiveness,financial_flexibility,credibility,management_risk])
 
     st.success(Predict)
     
